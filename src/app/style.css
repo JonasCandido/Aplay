@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+.headline-primary{
+    color: white;
+    background-color: #F50D1D;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headline-primary > h1{
+    font-family: 'Kanit', sans-serif;
+    margin: 0 10px;
+    padding: 10px 10px;
+    font-size: 2.5em;
+}
+
+.loadingParagraph{
+    margin: 10px;
+    color: white;
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25em;
+}
+
+@media screen and (max-width:600px) {
+    .headline-primary{
+        display: block;
+        text-align: left;
+    }
+    .headline-primary > h1{
+        letter-spacing: 10px;
+        font-size: 3em;
+        height: 70px;
+        padding: 0px;
+    }
+}

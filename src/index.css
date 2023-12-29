@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
+
+:root{
+    --color-main: #332B2C;
+}
+
+body{
+    margin: 0;
+    font-family: 'Afacad', sans-serif;
+    background-color: var(--color-main);
+}

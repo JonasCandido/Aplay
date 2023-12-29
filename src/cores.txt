@@ -1,0 +1,4 @@
+body: #332B2C
+destaque: #F50D1D
+obscure: #C2303A
+others: #8F4045 , #5C3C3E
