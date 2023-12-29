@@ -1,7 +1,7 @@
 import * as React from 'react'
 import axios from 'axios'
 import {NavigationBar} from '../navigationbar'
-import {List} from '../List'
+import {List} from '../list'
 import './style.css'
 
 const animesFetchInit = 'ANIMES_FETCH_INIT'
