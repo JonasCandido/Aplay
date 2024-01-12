@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import './style.css'
+import { Link } from 'react-router-dom'
 
 const List = ({list}) => {  
     return(
@@ -8,12 +9,12 @@ const List = ({list}) => {
             )}
         </main>
     )
-  }
+}
   
-const Item = ({images:{jpg:{large_image_url}},title,synopsis}) => {
+const Item = ({images:{jpg:{large_image_url}},title,mal_id,synopsis}) => {  
     return (
         <div className="item">
-            <a href="#">
+            <Link to={`/${mal_id}`}>
                 <img src={large_image_url} alt={title + " cover"}></img>
                 <h2>{title}</h2>
                 <div className="overlay">
@@ -22,7 +23,7 @@ const Item = ({images:{jpg:{large_image_url}},title,synopsis}) => {
                         <p>{synopsis}</p>
                     </div>
                 </div>
-            </a>
+            </Link>
         </div>
     )
 }
@@ -35,6 +36,7 @@ Item.propTypes = {
     images: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired,
     synopsis: PropTypes.string.isRequired,
+    mal_id: PropTypes.number.isRequired,
 }
 
 export {List}

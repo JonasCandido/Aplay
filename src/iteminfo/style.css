@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+.loadingParagraph, .errorParagraph{
+    margin: 10px 0px 0px 10px;
+    color: white;
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25em;
+}
+
+.itemDisplay{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+        "image synopsis"
+        "image itemVideo"
+        "itemAttributes itemVideo"
+        ;
+}
+
+.itemTitle{
+    background-color: #F50D1D;;
+    font-family: 'Kanit',sans-serif;
+    font-size: 2.5em;
+    color: white;
+    margin: 0px 0px 10px 0px;
+    text-align: center;
+}
+
+.itemImage{
+    justify-self: center;
+    grid-area: image;
+    width: 270px;
+    height: 400px;
+}
+
+.itemAttributes{
+    grid-area: itemAttributes;
+    justify-self: center;
+    margin: 0px;
+    max-width: 270px;
+}
+
+.genres, .genre,.year, .rating{
+    color: white;
+    margin: 0px;
+    border: 1px solid white;
+    padding: 0px 5px;
+}
+
+.genre{
+    display: inline-block;
+}
+
+.itemSynopsis{
+    grid-area: synopsis;
+    max-height: 125px;
+    overflow-y: auto;
+    max-width: 1000px;
+    margin:0px; 
+    color: white;
+    text-align: justify;
+}
+
+.itemVideo{
+    width: 500px;
+    height: 250px;
+    margin: 0px;
+    grid-area: itemVideo;
+}
+
+@media screen and (max-width: 600px){
+    .itemTitle{
+        font-size: 2em;
+    }
+    .itemDisplay{
+        justify-items: center;
+        grid-template-areas: 
+            "image"
+            "synopsis"
+            "itemVideo"
+            ;
+    }
+    .itemImage{
+        width: 270px;
+        height: 300px;
+    }
+
+    .itemAttributes{
+        display: none;
+    }
+
+    .itemSynopsis{
+        margin: 0px 20px;
+        max-height: 150px;
+    }
+    .itemVideo{
+        width: 400px;
+        height: 200px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width:992px){
+    .itemTitle{
+        font-size: 2.25em;
+    }
+    .itemDisplay{
+        justify-items: center;
+        grid-template-areas: 
+            "image itemAttributes"
+            "synopsis synopsis"
+            "itemVideo itemVideo"
+            ;
+    }
+    .itemImage{
+        justify-self: right;
+        margin: 0px 20px;
+        width: 250px;
+        height: 300px;
+    }
+
+    .itemAttributes{
+        justify-self: left;
+        align-self: end;
+        max-width: 200px;
+    }
+
+    .itemSynopsis{
+        margin: 0px 20px;
+        max-height: 150px;
+    }
+    .itemVideo{
+        width: 550px;
+        height: 275px;
+    }
+}
+

@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types'
 import './style.css'
 
-const NavigationBar = ({onInputChange,search}) => {
+const NavigationBar = ({onSearch,search}) => {
     return(
       <div className="navigationContainer">
         <NavigationOptions options={["Top", "Genre", "Season"]} />
-        <input onChange={onInputChange} value={search} type="text" placeholder="Search for the anime..." />
+        <input onChange={onSearch} value={search} type="text" placeholder="Search for the anime..." />
       </div>
     )
   }
@@ -19,7 +19,7 @@ const NavigationBar = ({onInputChange,search}) => {
 }
 
 NavigationBar.propTypes = {
-    onInputChange: PropTypes.func.isRequired,
+    onSearch: PropTypes.func.isRequired,
     search: PropTypes.string.isRequired,
   }
   
