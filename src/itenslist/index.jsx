@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types'
 import './style.css'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
-const List = ({list}) => {  
+const ItensList = ({list}) => {  
     return(
         <main className="listContainer">
             {list.map(item => (<Item key={item.mal_id} {...item} />)
@@ -28,7 +28,7 @@ const Item = ({images:{jpg:{large_image_url}},title,mal_id,synopsis}) => {
     )
 }
 
-List.propTypes = {
+ItensList.propTypes = {
     list: PropTypes.array.isRequired,
 }
   
@@ -39,4 +39,4 @@ Item.propTypes = {
     mal_id: PropTypes.number.isRequired,
 }
 
-export {List}
+export {ItensList}

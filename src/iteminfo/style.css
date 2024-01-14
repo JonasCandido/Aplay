@@ -15,7 +15,7 @@
     grid-template-areas: 
         "image synopsis"
         "image itemVideo"
-        "itemAttributes itemVideo"
+        "itemAttributes characters"
         ;
 }
 
@@ -58,16 +58,47 @@
     max-height: 125px;
     overflow-y: auto;
     max-width: 1000px;
-    margin:0px; 
     color: white;
     text-align: justify;
 }
 
+.itemSynopsis > p{
+    margin: 0px;
+}
+
 .itemVideo{
-    width: 500px;
+    width: 450px;
     height: 250px;
     margin: 0px;
     grid-area: itemVideo;
+}
+
+.characters{
+    grid-area: characters;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    max-width: 800px;
+    text-align: center;
+}
+
+.characters p{
+    margin: 0px;
+}
+
+.character{
+    flex: 1;
+    margin: 10px;
+}
+
+.itemCharacterImage{
+    width: 130px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.itemCharacterName{
+    font-family: 'Oswald', sans-serif;
 }
 
 @media screen and (max-width: 600px){
@@ -80,6 +111,7 @@
             "image"
             "synopsis"
             "itemVideo"
+            "characters"
             ;
     }
     .itemImage{
@@ -111,6 +143,7 @@
             "image itemAttributes"
             "synopsis synopsis"
             "itemVideo itemVideo"
+            "characters characters"
             ;
     }
     .itemImage{

@@ -20,7 +20,7 @@ const NavigationBar = ({onSearch,search}) => {
 
 NavigationBar.propTypes = {
     onSearch: PropTypes.func.isRequired,
-    search: PropTypes.string.isRequired,
+    search: PropTypes.string,
   }
   
 NavigationOptions.propTypes = {

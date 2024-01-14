@@ -1,8 +1,7 @@
 import * as React from 'react'
 import axios from 'axios'
-import PropTypes from 'prop-types'
 import {NavigationBar} from '../navigationbar'
-import {List} from '../list'
+import {ItensList} from '../itenslist'
 import './style.css'
 
 const animesFetchInit = 'ANIMES_FETCH_INIT'
@@ -59,23 +58,18 @@ const Home = () => {
       {animes.isError && <p>Something went wrong...</p>}
       {animes.isLoading?(
         <p className="loadingParagraph">Loading...</p>
-      ):(<List list={animes.data} />)}
+      ):(<ItensList list={animes.data} />)}
     </div>
   )
 }
 
-const HeaderWithNav = ({onSearch,searchTerm}) => {
+const HeaderWithNav = (props) => {
   return(
     <header className="headline-primary">
         <h1>Aplay!</h1>
-        <NavigationBar onSearch={onSearch} search={searchTerm} />
+        <NavigationBar {...props}/>
     </header>
   )
-}
-
-HeaderWithNav.propTypes = {
-  onSearch: PropTypes.func.isRequired,
-  searchTerm: PropTypes.string.isRequired,
 }
 
 export {Home}
