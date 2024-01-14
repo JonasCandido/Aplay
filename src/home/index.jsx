@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { useSearchParams } from 'react-router-dom'
 import axios from 'axios'
 import {NavigationBar} from '../navigationbar'
 import {ItensList} from '../itenslist'
@@ -26,7 +27,8 @@ const animesReducer = (state,action) => {
 let scheduled = '';
 
 const Home = () => {
-  const[searchTerm, setSearchTerm] = React.useState('')
+  const [searchParams, setSearchParams] = useSearchParams()
+  const searchTerm = searchParams.get('name') || ''
   const [animes,dispatchAnimes] = React.useReducer(animesReducer,{data:[],isLoading:false,isError:false})
   const handleFetchAnimes = React.useCallback(() => {
     dispatchAnimes({type:animesFetchInit})
@@ -49,7 +51,12 @@ const Home = () => {
 
 
   const handleSearch = (event) => {
-    setSearchTerm(event.target.value)
+    const name = event.target.value
+    if(name){
+      setSearchParams({name: event.target.value})
+    } else {
+      setSearchParams({})
+    }  
   }
 
   return(
