@@ -1,5 +1,5 @@
 # Aplay
- A website created with Vite, React, and Jinkan API
+ A website created with Vite, React, and Jinkan API.
 ## How to run the project 
 On your terminal (here I used bash for example), run:
 ```
